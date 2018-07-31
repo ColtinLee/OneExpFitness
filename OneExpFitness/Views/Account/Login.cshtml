@@ -1,0 +1,35 @@
+﻿@model OneExpFitness.ViewModels.Account.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.Username)
+            @Html.TextBoxFor(x => x.Username)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.Password)
+            @Html.PasswordFor(x => x.Password)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+           <label><input type="checkbox" name="RememberMe" />Remember Me?</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-success">Sign In</button>
+        </div>
+    </div>
+}

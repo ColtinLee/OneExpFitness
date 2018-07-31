@@ -1,0 +1,56 @@
+﻿@model OneExpFitness.ViewModels.Account.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<h1>Create Your Account</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.Email, new { @class = "control-label" })
+            @Html.TextBoxFor(x=> x.Email, new { @class= "form-control"})
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.Username, new { @class = "control-label" })
+            @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.FirstName, new { @class = "control-label" })
+            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.LastName, new { @class = "control-label" })
+            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.Password, new { @class = "control-label" })
+            @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(x => x.ConfirmPassword, new { @class = "control-label" })
+            @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-success">Create Profile</button>
+        </div>
+    </div>
+}
