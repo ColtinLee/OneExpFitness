@@ -103,6 +103,11 @@ namespace OneExpFitness.Controllers
             return View(model);
         }
 
+        public IActionResult UserProfile()
+        {
+            return View();
+        }
+
         public void AddErrors(IdentityResult result)
         {
             foreach (var error in result.Errors) {

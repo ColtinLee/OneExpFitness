@@ -1,0 +1,40 @@
+﻿@model OneExpFitness.ViewModels.Account.UserProfileViewModel
+@{
+    ViewData["Title"] = "UserProfile";
+}
+
+<h2>UserProfile</h2>
+
+    <div class="panel panel-info col-md-4">
+        <div class="panel-body">
+            
+        </div>
+    </div>
+    <div class="panel panel-info col-md-4">
+        <div class="panel-body">
+            <div class="row">
+                @Html.LabelFor(x => x.Email)
+                @Html.DisplayFor(x => x.Email)
+            </div>
+            <div class="row">
+                @Html.LabelFor(x => x.FirstName)
+                @Html.DisplayFor(x => x.FirstName)
+            </div>
+            <div class="row">
+                @Html.LabelFor(x => x.LastName)
+                @Html.DisplayFor(x => x.LastName)
+            </div>
+            <div class="row">
+                @Html.LabelFor(x => x.Password)
+                @Html.DisplayFor(x => x.Password)
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info col-md-4">
+        <div class="panel-body">
+            <div class="row">
+                <a asp-controller="Account" asp-action="EditProfile">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+

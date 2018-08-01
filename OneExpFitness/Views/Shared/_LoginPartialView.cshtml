@@ -7,7 +7,7 @@
     {
     <ul class="nav navbar-nav pull-right">
         <li>
-            <a href="#">Hello @User.Identity.Name!</a></li>
+            <a asp-controller="Account" asp-action="UserProfile">Hello @User.Identity.Name!</a></li>
         <li>
             <a href="#" onclick="document.getElementById('LogOutForm').submit()">Log Out</a>
         </li>
